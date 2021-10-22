@@ -208,9 +208,9 @@ endif()
 # in scorec-config.cmake
 set(TARGETS ${TARGETS} PARENT_SCOPE)
 
-include(smokeTesting.cmake)
 # Add the nightly testing script, if needed
 if(IS_TESTING)
+  include(smokeTesting.cmake)
   include(testing.cmake)
 endif()
 
