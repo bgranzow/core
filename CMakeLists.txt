@@ -11,6 +11,8 @@ project(SCOREC VERSION 2.2.6 LANGUAGES CXX C)
 include(cmake/bob.cmake)
 include(cmake/xsdk.cmake)
 
+find_package(MPI REQUIRED)
+
 option(USE_XSDK_DEFAULTS "enable the XDSK v0.3.0 default configuration" NO)
 
 #requre c++11 without extensions
