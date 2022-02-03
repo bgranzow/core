@@ -1,6 +1,7 @@
 #include <ma.h>
 #include <apf.h>
 #include <gmi_mesh.h>
+#include <gmi_null.h>
 #include <apfMDS.h>
 #include <PCU.h>
 #include <lionPrint.h>
@@ -44,6 +45,7 @@ int main(int argc, char** argv)
   gmi_register_sim();
 #endif
   gmi_register_mesh();
+  gmi_register_null();
   getConfig(argc,argv);
   ma::Mesh* m = apf::loadMdsMesh(modelFile,meshFile);
   ma::Input* in = ma::makeAdvanced(ma::configureUniformRefine(m, 1));

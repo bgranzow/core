@@ -1,5 +1,6 @@
 #include <apf.h>
 #include <gmi_mesh.h>
+#include <gmi_null.h>
 #include <apfMDS.h>
 #include <apfMesh2.h>
 #include <apfNumbering.h>
@@ -52,6 +53,7 @@ int main(int argc, char** argv)
   gmi_register_sim();
 #endif
   gmi_register_mesh();
+  gmi_register_null();
   char const* modelpath = argv[1];
   char const* meshpath = argv[2];
   apf::Mesh2* m = apf::loadMdsMesh(modelpath, meshpath);
