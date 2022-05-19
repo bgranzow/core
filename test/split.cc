@@ -1,4 +1,5 @@
 #include <gmi_mesh.h>
+#include <gmi_null.h>
 #include <apf.h>
 #include <apfMesh2.h>
 #include <apfMDS.h>
@@ -86,6 +87,7 @@ int main(int argc, char** argv)
   gmi_register_sim();
 #endif
   gmi_register_mesh();
+  gmi_register_null();
   getConfig(argc,argv);
   bool isOriginal = ((PCU_Comm_Self() % partitionFactor) == 0);
   gmi_model* g = 0;

@@ -116,7 +116,7 @@ void restore_meta(pcu_file* file, apf::Mesh* mesh) {
   }
   PCU_ALWAYS_ASSERT(version <= latest_version_number);
   PCU_ALWAYS_ASSERT(nfields >= 0);
-  PCU_ALWAYS_ASSERT(nfields < 256);
+  PCU_ALWAYS_ASSERT(nfields < 10000);
   for (int i = 0; i < nfields; ++i) {
     restore_field_meta(file, mesh);
   }

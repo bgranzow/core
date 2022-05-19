@@ -49,7 +49,7 @@ enum {
    have a strange application. */
 #define MAX_ENTITIES (100*1000*1000)
 #define MAX_PEERS (10*1000)
-#define MAX_TAGS (100)
+#define MAX_TAGS (10000)
 
 static int smb2mds(int smb_type)
 {
