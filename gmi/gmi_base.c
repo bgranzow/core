@@ -42,7 +42,8 @@ struct agm_ent agm_from_gmi(struct gmi_ent* e)
   int uid;
   struct agm_ent a;
   p = (char*)e;
-  uid = p - ((char*)0);
+  (void)p;
+  uid = 0;
   if (uid == 0) {
     a.type = 0;
     a.id = -1;

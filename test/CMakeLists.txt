@@ -132,6 +132,8 @@ endif()
 #PUMIPic print partition utility
 util_exe_func(print_pumipic_partition print_pumipic_partition.cc)
 
+util_exe_func(spr_test spr_test.cc)
+
 # Unit tests / functionality regression tests
 test_exe_func(qr qr.cc)
 test_exe_func(eigen_test eigen_test.cc)
@@ -140,7 +142,6 @@ test_exe_func(align align.cc)
 test_exe_func(field_io field_io.cc)
 test_exe_func(tensor tensor.cc)
 test_exe_func(test_AD test_AD.cc)
-test_exe_func(spr_test spr_test.cc)
 test_exe_func(reposition reposition.cc)
 test_exe_func(writeIPFieldTest writeIPFieldTest.cc)
 test_exe_func(shapefun shapefun.cc)

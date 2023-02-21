@@ -1,4 +1,5 @@
 #include <gmi_mesh.h>
+#include <gmi_null.h>
 #include <apfMDS.h>
 #include <apfMesh2.h>
 #include <apf.h>
@@ -107,6 +108,7 @@ int main(int argc, char** argv)
   gmi_register_sim();
 #endif
   gmi_register_mesh();
+  gmi_register_null();
   print_stats("malloc used before", get_chunks());
   apf::Mesh2* m = apf::loadMdsMesh(argv[1],argv[2]);
   print_stats("kernel heap", get_peak());

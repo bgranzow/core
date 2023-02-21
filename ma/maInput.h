@@ -133,6 +133,10 @@ class Input
     const char* debugFolder;
 };
 
+Input* configure(
+    Mesh* m,
+    SolutionTransfer* s=0);
+
 /** \brief generate a configuration based on an anisotropic function.
  \param s if non-zero, use that to transfer all fields. otherwise,
           transfer any associated fields with default algorithms

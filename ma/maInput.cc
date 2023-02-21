@@ -180,7 +180,7 @@ void setSolutionTransfer(Input* in, SolutionTransfer* s)
   }
 }
 
-static Input* configure(
+Input* configure(
     Mesh* m,
     SolutionTransfer* s)
 {
