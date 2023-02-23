@@ -10,6 +10,7 @@
 #include "gmi_base.h"
 #include "gmi_lookup.h"
 #include "agm.h"
+#include <stdint.h>
 #include <stdlib.h>
 #include <string.h>
 
@@ -38,12 +39,9 @@ struct gmi_ent* gmi_from_agm(struct agm_ent e)
 
 struct agm_ent agm_from_gmi(struct gmi_ent* e)
 {
-  char* p;
-  int uid;
+  intptr_t uid;
   struct agm_ent a;
-  p = (char*)e;
-  (void)p;
-  uid = 0;
+  uid = (intptr_t)e;
   if (uid == 0) {
     a.type = 0;
     a.id = -1;
