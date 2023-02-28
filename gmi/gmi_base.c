@@ -39,9 +39,10 @@ struct gmi_ent* gmi_from_agm(struct agm_ent e)
 
 struct agm_ent agm_from_gmi(struct gmi_ent* e)
 {
-  intptr_t uid;
   struct agm_ent a;
-  uid = (intptr_t)e;
+  size_t sad;
+  memcpy(&sad, &e, sizeof(sad));
+  int uid = (int)sad;
   if (uid == 0) {
     a.type = 0;
     a.id = -1;
